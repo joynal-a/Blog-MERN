@@ -55,7 +55,7 @@ class AuthController
                         return res.status(200).json({
                             message: "Login Successfully",
                             token,
-                            name: isEmail.name,
+                            name: isEmail.username,
                         })
 
                     }else{
