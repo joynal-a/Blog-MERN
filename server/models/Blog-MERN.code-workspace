@@ -1,6 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "Individual_Webinar",
+			"path": "C:/Users/Joynal/Downloads/Individual_Webinar"
+		},
+		{
+			"name": "Blog-MERN",
 			"path": "../.."
 		}
 	],
