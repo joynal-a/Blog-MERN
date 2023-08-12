@@ -6,11 +6,27 @@ class BlogController
             const fetchAllBlog = await blogModel.find({});
             return res.status(400).json(fetchAllBlog);
         }catch(error){
-            return res.status(400).json({});
+            return res.status(400).json({ message: error.message });
         }
     }
     static addNewBlog = async(req, res) => {
-        res.send("Add new blog");
+        const {title, category, description,} = req.body;
+        try{
+            if(title && category && description){
+                const addBlog = new blogModel({
+                    title: title,
+                    description: description,
+                    category: category,
+                    thumbnail: req.file.filename,
+                });
+
+            }else{
+                return res.status(400).json({ message: 'All fields are required' });
+            }
+        }catch(error){
+            return res.status(400).json({ message: error.message });
+        }
+
     }
     static getSingleBlog = async(req, res) => {
         res.send("get single blog");
