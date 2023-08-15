@@ -4,10 +4,10 @@ import jwt from "jsonwebtoken";
 class AuthController
 {
     static userRagistration = async(req, res) => {
-        const {username, email, password } = req.body;
+        const {name, email, password } = req.body;
 
         try{
-            if(username && email && password){
+            if(name && email && password){
                 const isUser = await authModel.findOne({email: email});
                 if(!isUser){
                     // PssWord hasing
@@ -16,7 +16,7 @@ class AuthController
 
                     // Save a User 
                     const newUser = authModel({
-                        username,
+                        name,
                         email,
                         password: hashedPassword
                     });
