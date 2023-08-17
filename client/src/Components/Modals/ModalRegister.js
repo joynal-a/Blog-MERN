@@ -1,27 +1,23 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 
 const ModalRegister = () => {
 
-    const navigate = useNavigate();
 
     const [input, setInput] = useState({
         name: "",
         email: "",
         password: ""
     });
-
-
     
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const res = await axios.post("http://localhost:9000/api/v1/user/register", input);
 
-            alert (res.data.message);
+            alert (res.data.message);            
             
-            // navigate("/login");
+            document.getElementById("LoginButton").click();
 
         } catch (error) {
             alert(error.response.data.message)

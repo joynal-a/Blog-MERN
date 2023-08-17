@@ -52,10 +52,12 @@ class AuthController
                             expiresIn: "1d",
                         });
 
+                        console.log(res);
+
                         return res.status(200).json({
                             message: "Login Successfully",
                             token,
-                            name: isEmail.username,
+                            name: isEmail.name,
                         })
 
                     }else{
