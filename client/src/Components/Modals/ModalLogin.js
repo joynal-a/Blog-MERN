@@ -15,8 +15,6 @@ const ModalLogin = () => {
     const afterLogin = (res) => {
         alert (res.data.message); 
 
-        console.log(res)
-
         localStorage.setItem("token", res.data.token);           
         localStorage.setItem("name", res.data.name);            
         document.getElementById("closeLoginModal").click();
@@ -27,7 +25,6 @@ const ModalLogin = () => {
         e.preventDefault();
         try {
             const res = await axios.post("http://localhost:9000/api/v1/user/login", input);
-
             afterLogin(res);  
 
         } catch (error) {

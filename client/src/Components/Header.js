@@ -13,7 +13,7 @@ const Header = () => {
         <div className="container">
           <div className="row px-3">
             <div className="col-md-4 navbar-dark d-flex justify-content-between align-items-center">
-              <a className="navbar-brand" href="www.dfd.com">Logo</a>
+              <a id='siteLogo' className="navbar-brand" href="/">Logo</a>
               <button className="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span className="navbar-toggler-icon"></span>
               </button>
@@ -57,13 +57,6 @@ const Header = () => {
                             </>
                           ) 
                         }
-
-
-
-
-
-
-
                       </ul>
                     </div>
                   </div>
