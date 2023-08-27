@@ -33,7 +33,7 @@ const Header = () => {
                         { token && token !== null ? (
                             <>
                               <li className="nav-item text-white">
-                                <span className='nav-link' data-bs-toggle="modal" data-bs-target="#ModalProfile">
+                                <span className='nav-link' data-bs-toggle="modal" data-bs-target="#ModalAddBLog1">
                                   Add blog
                                 </span>
                               </li>

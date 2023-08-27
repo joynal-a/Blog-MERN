@@ -10,8 +10,7 @@ const ModalProfile = () => {
     document.getElementById("siteLogo").click();
   }
 
-  const [name, setName] = useState( localStorage.getItem('name') )
-
+  const [name, setName] = useState('');
 
   useEffect(() => {
 

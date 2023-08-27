@@ -2,6 +2,7 @@ import React from 'react'
 import ModalLogin from './Modals/ModalLogin'
 import ModalRegister from './Modals/ModalRegister'
 import ModalProfile from './Modals/ModalProfile'
+import ModalAddBLog from './Modals/ModalAddBLog'
 
 const Modals = () => {
   return (
@@ -9,6 +10,7 @@ const Modals = () => {
       <ModalLogin />
       <ModalRegister />
       <ModalProfile />
+      <ModalAddBLog />
     </>
   )
 }

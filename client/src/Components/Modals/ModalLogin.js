@@ -7,18 +7,17 @@ const ModalLogin = () => {
     const navigate = useNavigate();
 
     const [input, setInput] =  useState({
-
         email: "",
         password: ""
     });
 
     const afterLogin = (res) => {
-        alert (res.data.message); 
 
         localStorage.setItem("token", res.data.token);           
         localStorage.setItem("name", res.data.name);            
         document.getElementById("closeLoginModal").click();
         navigate("/");  
+
     }
     
     const handleSubmit = async (e) => {
