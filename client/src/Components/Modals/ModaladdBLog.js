@@ -3,6 +3,12 @@ import React, { useState } from 'react'
 
 const ModalAddBLog = () => {
 
+  const [input, setInput] = useState({
+    title: "",
+    description:"",
+    category:""
+  });
+
   const [cat, setCat] = useState({
     title: "",
   });
@@ -33,7 +39,58 @@ const ModalAddBLog = () => {
                     <div className="modal-body p-4">
                         <div className="row">
                           <div className="col-md-8">
+                            <form action="">
+                              <label htmlFor="BlogTitle">Add Blog Title</label>
+                              <input 
+                                type="text" 
+                                name="title"
+                                value={input.title}
+                                onChange={(e)=> setInput({...input, [e.target.name]: e.target.value })}
+                                id="BlogTitle"
+                                className="form-control"
+                                placeholder='Enter Category title'
+                              />
+
+                              <label htmlFor="BlogDesc">Add Blog Descriptoin</label>
+                              <textarea 
+                                type="text" 
+                                name="title"
+                                value={input.description}
+                                onChange={(e)=> setInput({...input, [e.target.name]: e.target.value })}
+                                id="BlogDesc"
+                                className="form-control"
+                                placeholder='Enter Category title'
+                              />
+
+
+                              <label htmlFor="BlogThumbnail">Thumbnail</label>
+                              <input 
+                                type="file" 
+                                name="thumbnail"
+                                value={input.description}
+                                onChange={(e)=> setInput({...input, [e.target.name]: e.target.value })}
+                                id="BlogThumbnail"
+                                className="form-control"
+                                placeholder='Enter Category title'
+                              />
+
+                              
+                              <label htmlFor="addBlogCat">Add Blog Cat</label>
+                              <select 
+                                name="" 
+                                id="addBlogCat"
+                                onChange={(e)=> setInput({...input, [e.target.name]: e.target.value })}
+                                className="form-control"
+                                placeholder='Enter Category title'
+                                >
+
+                                </select>
+
+                            </form>
                           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, a reprehenderit delectus ipsa similique quis magni voluptas officiis autem inventore quam. Porro consectetur ipsam ipsum rem eos voluptatem ullam a!
+                            <div className="categories-list">
+
+                            </div>
                           </div>
                           <div className="col-md-4">
                             <form onSubmit={handleCat}>
